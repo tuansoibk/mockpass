@@ -22,12 +22,16 @@ SingPass:
  - http://localhost:5156/singpass/soap - receives SAML artifact and returns assertion
  - http://localhost:5156/singpass/authorize - OIDC login redirect with optional page
  - http://localhost:5156/singpass/token - receives OIDC authorization code and returns id_token
+ - http://localhost:5156/singpass/metadata - metadata endpoint
+ - http://localhost:5156/singpass/spcplogout - do nothing but redirect to the provided return_url query parameter
 
 CorpPass:
  - http://localhost:5156/corppass/logininitial
  - http://localhost:5156/corppass/soap
  - http://localhost:5156/corppass/authorize - OIDC login redirect with optional page
  - http://localhost:5156/corppass/token - receives OIDC authorization code and returns id_token
+ - http://localhost:5156/corppass/metadata - metadata endpoint
+ - http://localhost:5156/corppass/spcplogout - do nothing but redirect to the provided return_url query parameter
 
 MyInfo:
  - http://localhost:5156/myinfo/{v2,v3}/person-basic (exclusive to government systems)
